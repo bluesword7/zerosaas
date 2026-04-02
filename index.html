@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>ZeroSaaS | 슬랙·노션·지라 대체 오픈소스 및 프라이빗 AI 구축</title>
+    <meta name="description" content="SaaS 구독료를 멈추십시오. 슬랙(Slack), 노션(Notion), 지라(Jira)를 대체하는 엔터프라이즈급 오픈소스 인프라와 데이터 유출 없는 프라이빗 AI(Llama 3)를 귀사의 서버에 직접 구축해 드립니다.">
+    <meta name="keywords" content="슬랙 대체, 노션 대체, 지라 대체, Mattermost, AppFlowy, 오픈소스 구축, 프라이빗 AI, 온프레미스, SaaS 비용 절감, 사내망 AI, Llama 3">
+    <meta name="author" content="ZeroSaaS Infrastructure Group">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.zerosaas.co/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.zerosaas.co/">
+    <meta property="og:title" content="ZeroSaaS | 완벽한 오픈소스 마이그레이션 & 프라이빗 AI">
+    <meta property="og:description" content="매월 나가는 수천만 원의 소프트웨어 구독료. 이제 똑같은 UX의 오픈소스와 사내 구축형 AI로 인프라 주권을 되찾으세요.">
+    <meta property="og:image" content="https://www.zerosaas.co/assets/og-image.jpg"> 
+    <meta property="og:site_name" content="ZeroSaaS">
+    <meta property="og:locale" content="ko_KR">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.zerosaas.co/">
+    <meta name="twitter:title" content="ZeroSaaS | 오픈소스 기반 기업용 인프라 구축">
+    <meta name="twitter:description" content="슬랙, 노션, 지라를 버려도 업무 환경은 100% 똑같습니다. 구독료 없는 프라이빗 서버를 구축하세요.">
+    <meta name="twitter:image" content="https://www.zerosaas.co/assets/og-image.jpg">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "ZeroSaaS",
+      "url": "https://www.zerosaas.co",
+      "logo": "https://www.zerosaas.co/assets/logo.png",
+      "description": "기업용 오픈소스 인프라 구축 및 프라이빗 AI 컨설팅 전문 기업",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "ceo@zerosaas.co",
+        "contactType": "customer service"
+      }
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .lang-en { display: none; }
+        body.en-mode .lang-ko { display: none; }
+        body.en-mode .lang-en { display: block; }
+        .gradient-text { background: linear-gradient(135deg, #2563eb, #0ea5e9); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .smooth-shadow { box-shadow: 0 20px 40px -15px rgba(0,0,0,0.05); }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans antialiased transition-all">
+
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-lg border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-black tracking-tighter text-blue-600">ZeroSaaS.</div>
+            
+            <div class="flex items-center gap-6">
+                <div class="flex bg-gray-100 p-1 rounded-lg border border-gray-200 shadow-inner">
+                    <button onclick="toggleLang('ko')" id="btn-ko" class="px-4 py-1.5 text-xs font-bold rounded bg-white shadow text-blue-600 transition-all">KOR</button>
+                    <button onclick="toggleLang('en')" id="btn-en" class="px-4 py-1.5 text-xs font-bold rounded text-gray-400 hover:text-gray-700 transition-all">ENG</button>
+                </div>
+                <a href="#contact" class="hidden md:inline-block bg-gray-900 text-white px-6 py-2.5 rounded-full font-bold text-sm hover:bg-blue-600 transition-colors shadow-lg">
+                    <span class="lang-ko">무료 컨설팅 받기</span><span class="lang-en">Get Free Consultation</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="pt-40 pb-20 px-6 bg-gradient-to-b from-white to-gray-50">
+        <div class="max-w-5xl mx-auto text-center">
+            <div class="inline-block px-4 py-1.5 mb-6 text-sm font-bold text-blue-600 bg-blue-50 rounded-full border border-blue-100">
+                <span class="lang-ko">엔터프라이즈급 오픈소스 인프라 구축 서비스</span>
+                <span class="lang-en">Enterprise-Grade Open Source Infrastructure Setup</span>
+            </div>
+            
+            <h1 class="lang-ko text-5xl md:text-7xl font-extrabold mb-8 leading-[1.2] tracking-tight">
+                슬랙, 노션, 지라를 버려도<br>
+                <span class="gradient-text">업무 환경은 100% 똑같습니다.</span><br>
+                단지, '비용'만 사라질 뿐입니다.
+            </h1>
+            <h1 class="lang-en text-5xl md:text-7xl font-extrabold mb-8 leading-[1.2] tracking-tight">
+                Drop Slack, Notion, and Jira.<br>
+                <span class="gradient-text">Keep the Exact Same UX.</span><br>
+                Just Lose the Monthly Bill.
+            </h1>
+
+            <p class="lang-ko text-xl text-gray-500 max-w-3xl mx-auto mb-10 leading-relaxed font-medium">
+                새로운 툴을 배울 필요가 없습니다. 사용자 경험(UX)은 완전히 동일하게 유지하면서, 매월 빠져나가는 수천만 원의 SaaS 구독료를 영구적으로 소멸시키는 '프라이빗 온프레미스' 시스템을 구축해 드립니다.
+            </p>
+            <p class="lang-en text-xl text-gray-500 max-w-3xl mx-auto mb-10 leading-relaxed font-medium">
+                No retraining required. We build a 'Private On-Premise' system that maintains the exact same user experience (UX) while permanently eliminating tens of thousands of dollars in monthly SaaS subscription fees.
+            </p>
+
+            <a href="#roi" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-10 py-5 rounded-2xl font-bold text-xl transition-transform hover:-translate-y-1 shadow-2xl">
+                <span class="lang-ko">비용 절감액 계산해보기 ↓</span>
+                <span class="lang-en">Calculate Your Savings ↓</span>
+            </a>
+        </div>
+    </header>
+
+    <section class="py-24 px-6 bg-white border-y border-gray-100">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="lang-ko text-3xl md:text-4xl font-bold mb-4">"직원들이 새로운 툴에 적응할 수 있을까요?"<br><span class="text-blue-600">네, 차이를 거의 느끼지 못할 것입니다.</span></h2>
+                <h2 class="lang-en text-3xl md:text-4xl font-bold mb-4">"Will my team be able to adapt?"<br><span class="text-blue-600">Yes, they won't even notice the difference.</span></h2>
+                <p class="lang-ko text-gray-500 text-lg">기존 도구와 99% 동일한 UI/UX를 가진 최고급 오픈소스 엔진만을 엄선하여 세팅합니다.</p>
+                <p class="lang-en text-gray-500 text-lg">We handpick and configure premium open-source engines with 99% identical UI/UX to your current tools.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-8 rounded-3xl border border-gray-200 hover:border-blue-300 transition-colors smooth-shadow">
+                    <div class="flex items-center gap-3 mb-6">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Slack_icon_2019.svg" class="w-8 h-8 opacity-50 grayscale" alt="Slack 대체 오픈소스 메신저 로고">
+                        <i class="fas fa-arrow-right text-gray-400"></i>
+                        <div class="font-black text-xl text-blue-900">Mattermost</div>
+                    </div>
+                    <h3 class="lang-ko text-xl font-bold mb-3">슬랙과 동일한 인터페이스</h3>
+                    <h3 class="lang-en text-xl font-bold mb-3">Identical Interface to Slack</h3>
+                    <p class="lang-ko text-gray-600 text-sm leading-relaxed">채널(Channel), 멘션(@), 스레드(Thread) 구조가 슬랙과 완벽히 동일합니다. 기존 데이터를 완벽히 이관해 드립니다.</p>
+                    <p class="lang-en text-gray-600 text-sm leading-relaxed">Channels, mentions (@), and thread structures are exactly the same as Slack. We fully migrate your existing data.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-3xl border border-gray-200 hover:border-blue-300 transition-colors smooth-shadow">
+                    <div class="flex items-center gap-3 mb-6">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png" class="w-8 h-8 opacity-50 grayscale" alt="Notion 대체 지식베이스 로고">
+                        <i class="fas fa-arrow-right text-gray-400"></i>
+                        <div class="font-black text-xl text-blue-900">AppFlowy / Wiki.js</div>
+                    </div>
+                    <h3 class="lang-ko text-xl font-bold mb-3">노션의 블록 기반 에디팅</h3>
+                    <h3 class="lang-en text-xl font-bold mb-3">Notion's Block-based Editing</h3>
+                    <p class="lang-ko text-gray-600 text-sm leading-relaxed">'/' 키를 눌러 블록을 생성하고 칸반 보드를 만드는 경험이 동일합니다. 모든 사내 지식을 회사 서버에 안전하게 보관하세요.</p>
+                    <p class="lang-en text-gray-600 text-sm leading-relaxed">Press '/' to create blocks and boards just like Notion. Keep all corporate knowledge safely on your server.</p>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-3xl border border-gray-200 hover:border-blue-300 transition-colors smooth-shadow">
+                    <div class="flex items-center gap-3 mb-6">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Jira_%28Software%29_logo.svg" class="w-8 h-8 opacity-50 grayscale" alt="Jira 대체 프로젝트 관리 로고">
+                        <i class="fas fa-arrow-right text-gray-400"></i>
+                        <div class="font-black text-xl text-blue-900">Planka / OpenProject</div>
+                    </div>
+                    <h3 class="lang-ko text-xl font-bold mb-3">지라의 애자일 스프린트</h3>
+                    <h3 class="lang-en text-xl font-bold mb-3">Jira's Agile Sprints</h3>
+                    <p class="lang-ko text-gray-600 text-sm leading-relaxed">티켓 발행, 스프린트 관리, 간트 차트 기능이 기본 내장되어 있습니다. 무겁고 복잡한 지라 대신 직관적인 트래킹을 경험하세요.</p>
+                    <p class="lang-en text-gray-600 text-sm leading-relaxed">Ticket creation, sprints, and Gantt charts are built-in. Experience intuitive tracking without the heavy bulk of Jira.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="roi" class="py-24 px-6 bg-gray-900 text-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-[800px] h-[800px] bg-blue-600/20 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="max-w-6xl mx-auto relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="lang-ko text-4xl font-extrabold mb-4">직원 100명 기준, <span class="text-blue-400">연간 5,200만 원</span> 비용 발생</h2>
+                <h2 class="lang-en text-4xl font-extrabold mb-4">For 100 Employees, You Lose <span class="text-blue-400">$42,000/Year</span></h2>
+                <p class="lang-ko text-gray-400 text-lg">단 두 달이면 초기 구축비를 회수하고, 기업의 재무 상태는 극적으로 개선됩니다.</p>
+                <p class="lang-en text-gray-400 text-lg">Recoup your setup fee in just 2 months. Improve your financials dramatically.</p>
+            </div>
+
+            <div class="bg-gray-800 rounded-3xl border border-gray-700 overflow-hidden shadow-2xl mb-12">
+                <div class="grid md:grid-cols-2">
+                    <div class="p-10 border-b md:border-b-0 md:border-r border-gray-700">
+                        <div class="text-red-400 font-bold uppercase tracking-widest text-sm mb-6">Current SaaS Trap (Monthly)</div>
+                        <div class="space-y-6 mb-10">
+                            <div class="flex justify-between items-center text-gray-300">
+                                <span>Slack + Notion + Jira</span>
+                                <span class="font-mono text-xl"><span class="text-white font-bold">$3,190 / mo</span></span>
+                            </div>
+                        </div>
+                        <div class="pt-6 border-t border-gray-700">
+                            <div class="text-gray-400 text-sm mb-1"><span class="lang-ko">연간 총 지출 (매년 반복)</span><span class="lang-en">Yearly Total Cost (Recurring)</span></div>
+                            <div class="text-5xl font-black text-red-500">$38,280<span class="text-xl font-normal text-gray-500"> / year</span></div>
+                            <p class="lang-ko text-xs text-gray-500 mt-2">* 인원이 늘어날수록 이 비용은 끝없이 증가합니다.</p>
+                            <p class="lang-en text-xs text-gray-500 mt-2">* This cost increases infinitely as you hire more.</p>
+                        </div>
+                    </div>
+
+                    <div class="p-10 bg-gradient-to-br from-blue-900/50 to-gray-900">
+                        <div class="text-blue-400 font-bold uppercase tracking-widest text-sm mb-6">ZeroSaaS Ownership</div>
+                        <div class="space-y-6 mb-10">
+                            <div class="flex justify-between items-center text-gray-300">
+                                <span><span class="lang-ko">라이선스 비용</span><span class="lang-en">License Fees</span></span>
+                                <span class="font-mono text-xl text-green-400 font-bold">$0</span>
+                            </div>
+                            <div class="flex justify-between items-center text-gray-300 border-b border-gray-700 pb-4">
+                                <span><span class="lang-ko">초기 세팅비 (AI 에이전트 포함)</span><span class="lang-en">One-time Setup (Inc. AI Agent)</span></span>
+                                <span class="font-mono text-xl text-white font-bold">$5,000</span>
+                            </div>
+                            <div class="flex justify-between items-center text-gray-300 pt-2">
+                                <span><span class="lang-ko">매니지드 호스팅</span><span class="lang-en">Managed Hosting</span></span>
+                                <span class="font-mono text-xl text-white font-bold">$99 / mo</span>
+                            </div>
+                        </div>
+                        <div class="pt-6 border-t border-gray-700">
+                            <div class="text-gray-400 text-sm mb-1"><span class="lang-ko">1년 차 총 비용 (2년 차부터 $1,188)</span><span class="lang-en">1st Year Total (Year 2+ is $1,188)</span></div>
+                            <div class="text-5xl font-black text-blue-400">$6,188<span class="text-xl font-normal text-gray-500"> / 1st yr</span></div>
+                            <p class="lang-ko text-xs text-green-400 mt-2 font-bold">✓ 단 한 번의 투자. 1,000명이 써도 비용은 늘지 않습니다.</p>
+                            <p class="lang-en text-xs text-green-400 mt-2 font-bold">✓ One-time investment. Cost remains the same for 1,000+ users.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 px-6 bg-gray-50 border-y border-gray-200">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="lang-ko text-3xl md:text-4xl font-extrabold mb-4">이미 수많은 기업이 <span class="text-blue-600">독립</span>했습니다</h2>
+                <h2 class="lang-en text-3xl md:text-4xl font-extrabold mb-4">Companies Already <span class="text-blue-600">Reclaiming Control</span></h2>
+                <p class="lang-ko text-gray-500 text-lg">규모와 산업에 상관없이, 인프라 주권을 되찾은 기업들의 실제 사례입니다.</p>
+                <p class="lang-en text-gray-500 text-lg">Real success stories of businesses across industries breaking free from the SaaS trap.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-10">
+                <div class="bg-white p-10 rounded-[2rem] border border-gray-100 shadow-lg relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 bg-blue-600 text-white px-6 py-2 rounded-bl-2xl font-bold text-sm">
+                        <span class="lang-ko">연간 4,800만원 절감</span><span class="lang-en">Saved $40,000/yr</span>
+                    </div>
+                    <div class="text-gray-400 text-sm font-bold tracking-widest uppercase mb-2">Tech Startup</div>
+                    <h3 class="lang-ko text-2xl font-black mb-6 text-gray-900">A 소프트웨어 (임직원 150명)</h3>
+                    <h3 class="lang-en text-2xl font-black mb-6 text-gray-900">Company A (150 Employees)</h3>
+                    
+                    <div class="space-y-4 mb-8 text-sm">
+                        <div class="flex items-center gap-3 text-gray-600">
+                            <span class="w-20 font-bold text-gray-400">Before:</span> 
+                            <span class="lang-ko bg-red-50 text-red-600 px-3 py-1 rounded-full">슬랙 + 노션 (월 $3,500)</span>
+                            <span class="lang-en bg-red-50 text-red-600 px-3 py-1 rounded-full">Slack + Notion (monthly $3,500)</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-gray-600">
+                            <span class="w-20 font-bold text-blue-600">After:</span> 
+                            <span class="lang-ko bg-blue-50 text-blue-600 px-3 py-1 rounded-full font-bold">Mattermost + AppFlowy (월 $99)</span>
+                            <span class="lang-en bg-blue-50 text-blue-600 px-3 py-1 rounded-full font-bold">Mattermost + AppFlowy (monthly $99)</span>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-6 rounded-2xl italic text-gray-600 border-l-4 border-blue-400">
+                        <p class="lang-ko">"시리즈 A 투자 이후 인원이 3배로 늘었지만, 소프트웨어 비용은 1원도 늘지 않았습니다. 초기 구축비는 딱 한 달 만에 회수했습니다. 최고의 마이그레이션이었습니다."</p>
+                        <p class="lang-en">"Our headcount tripled after Series A, but our software bill didn't increase by a single cent. We recouped the setup fee in just one month."</p>
+                        <p class="lang-ko mt-4 font-bold text-sm text-gray-900">- CTO, A 소프트웨어</p>
+                        <p class="lang-en mt-4 font-bold text-sm text-gray-900">- CTO, A Software</p>
+                    </div>
+                </div>
+
+                <div class="bg-white p-10 rounded-[2rem] border border-gray-100 shadow-lg relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 bg-green-500 text-white px-6 py-2 rounded-bl-2xl font-bold text-sm">
+                        <span class="lang-ko">데이터 유출 0% 달성</span><span class="lang-en">0% Data Leakage</span>
+                    </div>
+                    <div class="text-gray-400 text-sm font-bold tracking-widest uppercase mb-2">B2B Consulting Group</div>
+                    <h3 class="lang-ko text-2xl font-black mb-6 text-gray-900">B 컨설팅 (임직원 70명)</h3>
+                    <h3 class="lang-en text-2xl font-black mb-6 text-gray-900">Agency B (70 Employees)</h3>
+                    
+                    <div class="space-y-4 mb-8 text-sm">
+                        <div class="flex items-center gap-3 text-gray-600">
+                            <span class="w-20 font-bold text-gray-400">Before:</span> 
+                            <span class="lang-ko bg-red-50 text-red-600 px-3 py-1 rounded-full">지라 + 퍼블릭 LLM</span>
+                            <span class="lang-en bg-red-50 text-red-600 px-3 py-1 rounded-full">Zira + public LLM</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-gray-600">
+                            <span class="w-20 font-bold text-blue-600">After:</span> 
+                            <span class="lang-ko bg-green-50 text-green-700 px-3 py-1 rounded-full font-bold">Planka + 프라이빗 AI 에이전트</span>
+                            <span class="lang-en bg-green-50 text-green-700 px-3 py-1 rounded-full font-bold">Planka + private AI AGENT</span>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-6 rounded-2xl italic text-gray-600 border-l-4 border-green-400">
+                        <p class="lang-ko">"고객사의 기밀 데이터를 다루기 때문에 퍼블릭 AI나 외부 서버의 지라를 쓰는 것이 항상 불안했습니다. 지금은 완벽히 차단된 사내망에서 오픈소스 엔진 기반의 프라이빗 솔루션을 안심하고 사용 중입니다."</p>
+                        <p class="lang-en">"Handling sensitive client data made us nervous about using public AI or external servers. Now, we use an air-gapped internal network with total peace of mind."</p>
+                        <p class="lang-ko mt-4 font-bold text-sm text-gray-900">- 보안 책임자, B 컨설팅</p>
+                        <p class="lang-en mt-4 font-bold text-sm text-gray-900">- Security Officer, B Consulting</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 px-6 bg-white">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="lang-ko text-4xl font-extrabold mb-6">"오픈소스는 관리가 어렵지 않나요?"<br><span class="text-blue-600">ZeroSaaS가 당신의 IT 부서가 됩니다.</span></h2>
+                <h2 class="lang-en text-4xl font-extrabold mb-6">"Isn't open-source hard to manage?"<br><span class="text-blue-600">ZeroSaaS becomes your IT Department.</span></h2>
+                <p class="lang-ko text-gray-600 text-lg mb-8 leading-relaxed">우리는 설치만 해주고 끝나는 외주 업체가 아닙니다. 기업이 본업에만 집중할 수 있도록 무중단 매니지드(Managed) 서비스를 제공합니다.</p>
+                <p class="lang-en text-gray-600 text-lg mb-8 leading-relaxed">We don't just install and leave. We provide zero-downtime managed services so you can focus entirely on your business.</p>
+                
+                <ul class="space-y-6">
+                    <li class="flex items-start gap-4">
+                        <div class="bg-blue-100 text-blue-600 w-12 h-12 rounded-full flex items-center justify-center shrink-0"><i class="fas fa-shield-alt"></i></div>
+                        <div>
+                            <h4 class="lang-ko font-bold text-lg">철통 보안 및 자동 패치</h4>
+                            <h4 class="lang-en font-bold text-lg">Ironclad Security & Auto-Patching</h4>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <div class="bg-blue-100 text-blue-600 w-12 h-12 rounded-full flex items-center justify-center shrink-0"><i class="fas fa-database"></i></div>
+                        <div>
+                            <h4 class="lang-ko font-bold text-lg">매일 새벽 자동 백업</h4>
+                            <h4 class="lang-en font-bold text-lg">Daily Automated Backups</h4>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="bg-gray-50 p-8 rounded-[2rem] border border-gray-200 shadow-xl relative">
+                <div class="absolute top-4 left-4 flex gap-2">
+                    <div class="w-3 h-3 rounded-full bg-red-400"></div>
+                    <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
+                    <div class="w-3 h-3 rounded-full bg-green-400"></div>
+                </div>
+                <div class="mt-8 font-mono text-sm text-gray-700 space-y-4">
+                    <div class="flex justify-between items-center pb-2 border-b border-gray-200">
+                        <span class="font-bold text-blue-600">ZeroSaaS Monitor</span>
+                        <span class="text-green-500"><i class="fas fa-circle text-[10px]"></i> Live</span>
+                    </div>
+                    <div>> Checking Server Status... <span class="text-green-600 font-bold">100% Uptime</span></div>
+                    <div>> Verifying Core Node... <span class="text-green-600 font-bold">Healthy</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 px-6 bg-blue-600 text-white text-center">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="lang-ko text-4xl md:text-5xl font-extrabold mb-6">더 이상 서버에<br>임대료를 내지 마십시오.</h2>
+            <h2 class="lang-en text-4xl md:text-5xl font-extrabold mb-6">Stop Paying Rent<br>on Someone Else's Server.</h2>
+            <a href="mailto:ceo@zerosaas.co" class="inline-block bg-white text-blue-600 px-12 py-5 rounded-full font-black text-xl shadow-2xl hover:bg-gray-50 transition-colors mt-8">
+                <span class="lang-ko">무료 구축 컨설팅 예약하기</span>
+                <span class="lang-en">Book a Free Consultation</span>
+            </a>
+        </div>
+    </section>
+
+    <footer class="py-10 text-center bg-gray-50 border-t border-gray-200 text-gray-500 text-sm font-medium">
+        <p class="lang-ko">© 2026 ZeroSaaS Infrastructure Group. 인프라의 주권을 되찾다.</p>
+        <p class="lang-en">© 2026 ZeroSaaS Infrastructure Group. Reclaiming Infrastructure Sovereignty.</p>
+    </footer>
+
+    <script>
+        function toggleLang(lang) {
+            const body = document.body;
+            const btnKo = document.getElementById('btn-ko');
+            const btnEn = document.getElementById('btn-en');
+
+            if (lang === 'en') {
+                body.classList.add('en-mode');
+                btnEn.classList.add('bg-white', 'text-blue-600', 'shadow');
+                btnEn.classList.remove('text-gray-400');
+                btnKo.classList.remove('bg-white', 'text-blue-600', 'shadow');
+                btnKo.classList.add('text-gray-400');
+            } else {
+                body.classList.remove('en-mode');
+                btnKo.classList.add('bg-white', 'text-blue-600', 'shadow');
+                btnKo.classList.remove('text-gray-400');
+                btnEn.classList.remove('bg-white', 'text-blue-600', 'shadow');
+                btnEn.classList.add('text-gray-400');
+            }
+        }
+    </script>
+</body>
+</html>
